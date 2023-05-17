@@ -1,14 +1,21 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_application_1/text_widget.dart';
+import 'package:flutter_application_1/dice_roll.dart';
 
 const gradientBegin = Alignment.topLeft;
 const gradientEnd = Alignment.bottomRight;
 
-class FirstWidget extends StatelessWidget {
+class FirstWidget extends StatefulWidget {
   const FirstWidget({super.key});
 
   @override
+  State<FirstWidget> createState() => _FirstWidgetState();
+}
+
+class _FirstWidgetState extends State<FirstWidget> {
+
+  @override
   Widget build(BuildContext context) {
+
     return Container(
       decoration: const BoxDecoration(
         gradient: LinearGradient(
@@ -20,13 +27,7 @@ class FirstWidget extends StatelessWidget {
           end: gradientEnd,
         ),
       ),
-      child: Center(
-          child: Image.asset(
-        'assets/images/dice-1.png',
-        height: 200,
-        width: 200,
-
-      )),
+      child: const DiceRoll(),
     );
   }
 }
