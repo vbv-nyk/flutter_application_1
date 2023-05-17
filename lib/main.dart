@@ -1,25 +1,15 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_application_1/first_widget.dart';
 
 void main() {
   runApp(
-    MaterialApp(
+    const MaterialApp(
       home: Scaffold(
-        backgroundColor: const Color.fromARGB(255, 59, 45, 85),
-        body: Container(
-          decoration: const BoxDecoration(
-            gradient: LinearGradient(colors: [
-              Color.fromARGB(255, 6, 21, 32),
-              Color.fromARGB(255, 3, 17, 29)
-            ], begin: Alignment.topLeft, end: Alignment.bottomRight),
-          ),
-          child: const Center(
-            child: Text(
-              "Hello World!",
-              style: TextStyle(color: Colors.white, fontSize: 28),
-            ),
-          ),
-        ),
+        backgroundColor: Color.fromARGB(255, 59, 45, 85),
+        body: FirstWidget(),
       ),
     ),
   );
 }
+
+
