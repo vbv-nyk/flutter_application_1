@@ -10,9 +10,9 @@ class FirstWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      decoration:const BoxDecoration(
+      decoration: const BoxDecoration(
         gradient: LinearGradient(
-          colors:  [
+          colors: [
             Color.fromARGB(255, 6, 21, 32),
             Color.fromARGB(255, 3, 17, 29)
           ],
@@ -20,9 +20,13 @@ class FirstWidget extends StatelessWidget {
           end: gradientEnd,
         ),
       ),
-      child: const Center(
-        child: TextWidget("Hello World"),
-      ),
+      child: Center(
+          child: Image.asset(
+        'assets/images/dice-1.png',
+        height: 200,
+        width: 200,
+
+      )),
     );
   }
 }
